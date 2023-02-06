@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+
+/* --------------------- */
+/*   CUSTOM PROPERTIES   */
+/* --------------------- */
+
+:root {
+  /* colors */
+  --neutral-100: hsl(0, 0%, 53%);
+  --neutral-200: hsl(0, 0%, 45%);
+  --neutral-300: hsl(0, 0%, 36%);
+
+  --dark-primary-100: hsl(0, 0%, 0%);
+
+  --primary-100: hsl(236, 94%, 93%);
+  --primary-200: hsl(241, 77%, 63%);
+
+  --accent-100: hsl(348, 87%, 85%);
+  --accent-200: hsl(357, 66%, 65%);
+
+  /* Typografy */
+  --fs-h1: 40px;
+  --fs-h1-small: var(--fs-h1);
+  --fs-h2: 34px;
+  --fs-h3: var(--fs-h1);
+
+  --fs-100: 16px;
+  --fs-200: 20px;
+  --fs-300: 24px;
+
+  --f-sans: 'Raleway', sans-serif;
+}
+
+@media (min-width: 35rem) {
+  :root {
+    /* font sizes */
+    --fs-h1: 60px;
+    --fs-h1-small: 40px;
+    --fs-h2: 44px;
+    --fs-h3: var(--fs-h1);
+  }
+}
