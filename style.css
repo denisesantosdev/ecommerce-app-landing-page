@@ -85,6 +85,40 @@
   border: 0;
 }
 
-.space-between > *:not(:first-child) {
+.margin-flow > *:not(:first-child) {
   margin-top: var(--margin-top, 2rem);
+}
+
+/* text colors */
+
+.text-clr-200 {
+  color: var(--primary-200);
+}
+
+/* typography */
+
+.f-weight-400 {
+  font-weight: 400;
+}
+
+.f-weight-500 {
+  font-weight: 500;
+}
+
+.f-weight-600 {
+  font-weight: 600;
+}
+
+.f-weight-700 {
+  font-weight: 700;
+}
+
+/* bg colors */
+
+.bg-clr-gradient {
+  background-image: linear-gradient(to right, var(--primary-100), white);
+}
+
+.bg-clr-accent-200 {
+  background-color: var(--accent-200);
 }
