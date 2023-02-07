@@ -152,3 +152,16 @@
   --padding-inline: 40px;
   background-color: var(--primary-200);
 }
+
+/* --------------------- */
+/*   ELEMENT SELECTORS   */
+/* --------------------- */
+
+body {
+  font-family: var(--f-sans);
+  overflow: hidden;
+}
+
+h1,h2,h3 {
+  color: var(--dark-primary-100);
+}
