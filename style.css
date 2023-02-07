@@ -6,6 +6,7 @@
 
 :root {
   /* colors */
+  --neutral-50: white;
   --neutral-100: hsl(0, 0%, 53%);
   --neutral-200: hsl(0, 0%, 45%);
   --neutral-300: hsl(0, 0%, 36%);
@@ -46,7 +47,6 @@
 /* --------------------- */
 
 /* layout */
-
 .flex {
   display: flex;
   gap: (--flex-gap, 1rem);
@@ -90,13 +90,11 @@
 }
 
 /* text colors */
-
 .text-clr-200 {
   color: var(--primary-200);
 }
 
 /* typography */
-
 .f-weight-400 {
   font-weight: 400;
 }
@@ -114,11 +112,43 @@
 }
 
 /* bg colors */
-
 .bg-clr-gradient {
-  background-image: linear-gradient(to right, var(--primary-100), white);
+  background-image: linear-gradient(to right, var(--primary-100), var(--neutral-50));
+}
+
+.bg-clr-accent-100 {
+  background-color: var(--accent-100);
 }
 
 .bg-clr-accent-200 {
   background-color: var(--accent-200);
+}
+
+/* --------------------- */
+/*       COMPONENTS      */
+/* --------------------- */
+
+/* buttons */
+.btn {
+  padding-block: var(--padding-block, 25px);
+  padding-inline: var(--padding-inline, 30px);
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: var(--primary-200);
+}
+
+.btn-secondary {
+  background-color: var(--accent-200);
+}
+
+.btn-large {
+  --padding-inline: 40px;
+  background-color: var(--primary-200);
 }
