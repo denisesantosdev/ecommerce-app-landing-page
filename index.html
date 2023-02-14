@@ -2,12 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Sweava - Shopping app for gadgets and gifts</title>
+    <link
+      rel="shortcut icon"
+      href="assets/logo-simple.svg"
+      type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/8da17daf77.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
-    <script type="module" src="/main.js"></script>
+    <header class="primary-header | container grid">
+      <figure class="logo-container">
+        <a href="#">
+        <img
+          src="assets/Logo.svg"
+          alt="sweava logo" />
+        </a>
+      </figure>
+
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation">
+        <span
+          class="screen-reader-only"
+          aria-expanded="false">
+          Menu
+        </span>
+        <i
+          class="fa-solid fa-bars"
+          aria-hidden="true"></i>
+      </button>
+
+      <nav
+        class="primary-navigation | flex"
+        id="primary-navigation"
+        data-visible="false">
+        <ul class="flex underline">
+          <li><a href="">Home</a></li>
+          <li><a href="">Team</a></li>
+          <li><a href="">Faq</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+
+        <div>
+          <a
+            href="#"
+            class="btn btn-secondary"
+            target="_blank">
+            Download App
+          </a>
+        </div>
+      </nav>
+    </header>
+    <script
+      type="module"
+      src="./main.js"></script>
   </body>
 </html>
