@@ -6,27 +6,53 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Sweava - Shopping app for gadgets and gifts</title>
+    <!-- google fonts link -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+
     <link
       rel="shortcut icon"
       href="assets/logo-simple.svg"
       type="image/x-icon" />
     <link
       rel="stylesheet"
-      href="reset.css" />
+      href="css/reset.css" />
     <link
       rel="stylesheet"
-      href="style.css" />
+      href="css/custom-properties.css" />
+    <link
+      rel="stylesheet"
+      href="css/utility-classes.css" />
+    <link
+      rel="stylesheet"
+      href="css/components.css" />
+    <link
+      rel="stylesheet"
+      href="css/typography.css" />
+    <link
+      rel="stylesheet"
+      href="css/main.css" />
+
+    <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/8da17daf77.js"
       crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="margin-flow-medium">
     <header class="primary-header | container grid">
       <figure class="logo-container">
         <a href="#">
-        <img
-          src="assets/Logo.svg"
-          alt="sweava logo" />
+          <img
+            src="assets/Logo.svg"
+            alt="sweava logo" />
         </a>
       </figure>
 
@@ -64,6 +90,151 @@
         </div>
       </nav>
     </header>
+
+    <main class="margin-flow-medium">
+      <section class="hero | container grid even-columns">
+        <div class="hero-text | margin-flow-small">
+          <h1>Shopping App for Gadgets and Gifts</h1>
+          <p>
+            Get 10% off your first order when you spend over £40 on any product!
+          </p>
+          <a
+            href="#"
+            class="btn btn-primary">
+            Download App
+          </a>
+        </div>
+        <div class="hero-img-container">
+          <img
+            src="assets/hero-img.png"
+            alt="cartoon character floating reaching for a plant in a vase"
+            class="hero-img" />
+        </div>
+      </section>
+
+      <h2>How the app works</h2>
+      <div class="margin-flow-big">
+        <section>
+          <div class="section-1 | container">
+            <div class="grid uneven-columns text-right">
+              <figure class="section-img-container">
+                <img
+                  src="assets/find-your-gadget.png"
+                  alt="app screen" />
+              </figure>
+              <div class="section-text | margin-flow-small">
+                <span>Create an account</span>
+                <h3>Discover original products</h3>
+                <p>
+                  There are more than 950 categories updated daily based on
+                  trending websites reviews an users rating.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="section-2 | container">
+            <div
+              class="grid uneven-columns text-left section-special-1 circles-pink">
+              <div class="section-text | margin-flow-small">
+                <h3>Experience products in AR</h3>
+                <p>
+                  Have you tried Augmented Reality? Stop looking at boring
+                  galleries and start experiences each item.
+                </p>
+              </div>
+              <figure class="section-img-container circles-purple">
+                <img
+                  src="assets/mobile-1.png"
+                  alt="app screen" />
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="section-3 | container">
+            <div class="grid uneven-columns text-right">
+              <figure class="section-img-container">
+                <img
+                  src="assets/mobile-2.png"
+                  alt="app screen" />
+              </figure>
+              <div class="section-text | margin-flow-small">
+                <span>Original platform</span>
+                <h3>Hottest deals around the web</h3>
+                <p>
+                  Find the perfect gift or everyday goods right at your
+                  fingertips.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container">
+          <div class="section-4 |  section-special-2">
+            <div class="grid even-columns">
+              <div class="section-text | margin-flow-small">
+                <h3>Save time & money with exclusive offers from top stores</h3>
+                <a
+                  href="#"
+                  class="btn btn-primary-big">
+                  Download App
+                </a>
+              </div>
+              <figure class="section-img-container">
+                <picture>
+                  <source
+                    media="(min-width: 48em)"
+                    srcset="assets/hand-holding-phone.png" />
+                  <img
+                    src="assets/hand-holding-phone-modile.png"
+                    alt="hand holding phone" />
+                </picture>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="primary-footer | container margin-flow-small">
+      <div class="grid even-columns">
+        <h2>Hey! Follow us on social media so you don’t miss any offer.</h2>
+        <figure class="footer-img-container">
+          <map name="image-map">
+            <area
+              shape="rect"
+              coords="20,20,100,100"
+              href=""
+              alt="youtube link" />
+            <area
+              shape="rect"
+              coords="70,70,150,150"
+              href=""
+              alt="facebook link" />
+            <area
+              shape="rect"
+              coords="90,90,190,190"
+              href=""
+              alt="twitter link" />
+          </map>
+          <img
+            src="assets/footer-img.png"
+            alt="cartoon character floating and holding a sign with social media icons"
+            usemap="#image-map" />
+        </figure>
+      </div>
+      <div class="footer-credits underline">
+        <p>
+          Created by:
+          <a href="https://github.com/denisesantosdev">denisesantosdev</a>
+          | Design:
+          <a href="https://www.figma.com/community/file/938370941255119298">
+            Ecommerce App UI Kit
+          </a>
+        </p>
+      </div>
+    </footer>
     <script
       type="module"
       src="./main.js"></script>

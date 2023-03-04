@@ -1,0 +1,59 @@
+:root {
+  /* colors */
+  --neutral-50: white;
+  --neutral-100: hsl(0, 0%, 53%);
+  --neutral-200: hsl(0, 0%, 45%);
+  --neutral-300: hsl(0, 0%, 36%);
+
+  --neutral-400: hsl(0, 0%, 0%);
+  --dark-primary-100: hsl(228, 28%, 20%);
+
+  --primary-100: hsl(236, 94%, 93%);
+  --primary-200: hsl(241, 77%, 63%);
+
+  --accent-100: hsl(348, 87%, 85%);
+  --accent-200: hsl(357, 66%, 65%);
+
+  --gradient: linear-gradient(to right, var(--primary-100), var(--neutral-50));
+
+  --f-sans: "Raleway", sans-serif;
+
+  /* line height */
+  --f1-lh: 1.7;
+  --f3-lh: 1.2;
+
+  /* padding */
+  --padding-small: 1rem;
+  --padding-medium: 2rem;
+  --padding-big: 4rem;
+
+  /* margin */
+  --margin-small: 1rem;
+  --margin-medium: 3rem;
+  --margin-big: 10rem;
+
+  /* Typography */
+  --fs-h1: 2.5rem;
+  --fs-h2: 2.125rem;
+  --fs-h2-big: 2.5rem;
+  --fs-h3: 2.5rem;
+  --fs-h3-big: 2.5rem;
+
+  --fs-50: 0.8125rem;
+  --fs-100: 1rem;
+  --fs-200: 1.25rem;
+  --fs-300: 1.5rem;
+}
+
+@media (min-width: 62em) {
+  :root {
+    /* font sizes */
+    --fs-h1: 3.75rem;
+    --fs-h2: 2.75rem;
+    --fs-h3: 2.5rem;
+    --fs-h3-big: 3.75rem;
+
+    /* line height */
+    --f1-lh: 1.2;
+  }
+}

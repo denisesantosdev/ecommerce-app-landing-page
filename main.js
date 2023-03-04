@@ -14,5 +14,4 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-expanded", false);
     navToggle.lastElementChild.classList = "fa-solid fa-bars"
   }
-
 });

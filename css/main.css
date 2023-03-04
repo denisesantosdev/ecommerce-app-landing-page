@@ -1,0 +1,116 @@
+body {
+  font-family: var(--f-sans);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@media (min-width: 62em) {
+  body {
+    background-image: url(../assets/hero-bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    text-align: left;
+  }
+}
+
+.primary-header {
+  grid-template-columns: 1fr 3.5fr;
+  align-items: center;
+  position: relative;
+  padding: var(--padding-small);
+}
+
+.logo-container {
+  justify-self: flex-start;
+  width: 7rem;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
+  justify-content: space-between;
+}
+
+.primary-navigation ul {
+  --flex-gap: max(2rem, 5vw);
+}
+
+@media (max-width: 52rem) {
+  .primary-navigation {
+    background-color: var(--neutral-50);
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: fit-content;
+    padding: 2rem;
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.104);
+    opacity: 0;
+    transform: rotateX(90deg);
+    transition: transform 0.3s ease-in, opacity 0.5s ease-in;
+    transform-origin: top;
+  }
+
+  .primary-navigation[data-visible="true"] {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+
+  .primary-navigation ul {
+    flex-direction: column;
+  }
+
+  .mobile-nav-toggle {
+    justify-self: flex-end;
+    display: unset;
+    border: 0;
+    background: transparent;
+    color: var(--dark-primary-100);
+  }
+}
+
+/* hero */
+.hero-img-container {
+  background-image: url(../assets/bg-hero-mobile.svg);
+  background-size: contain;
+  background-position-x: 100px;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.hero-img-container img {
+  margin: auto;
+}
+
+@media (max-width: 48em) {
+  .section-img-container {
+    order: 1;
+  }
+}
+
+@media (min-width: 62em) {
+  .hero-img-container {
+    background-image: none;
+  }
+}
+
+.section-img-container img:not(.section-special-2 img) {
+  max-width: 300px;
+  height: auto;
+}
+
+.footer-credits {
+  padding: var(--padding-small);
+}
+
+.hero-text,
+.section-text,
+footer {
+  padding-inline: var(--padding-small);
+}

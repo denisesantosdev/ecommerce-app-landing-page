@@ -1,0 +1,232 @@
+/* BUTTONS */
+.btn {
+  --circle-position-top: -70%;
+  --circle-position-left: -20%;
+  --circle-size: 50%;
+  padding-block: var(--btn-padding-block, 1.375rem);
+  padding-inline: var(--btn-padding-inline, 2.1875rem);
+  display: inline-block;
+  border-radius: 0.625rem;
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: var(--fs-200);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: scale(1.1, 1.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-200);
+  color: var(--neutral-50);
+  position: relative;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  color: var(--primary-200);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: var(--circle-position-top);
+  left: var(--circle-position-left);
+  width: var(--circle-size);
+  aspect-ratio: 1;
+  background-color: var(--accent-100);
+  border-radius: 50%;
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.4s ease-in;
+}
+
+.btn-primary:hover::after,
+.btn-primary:focus-visible::after {
+  opacity: 1;
+  transform: scale(5, 5);
+  z-index: -1;
+}
+
+.btn-primary-big {
+  --btn-padding-inline: 4rem;
+  background-color: var(--primary-200);
+  color: var(--neutral-50);
+}
+
+.btn-secondary {
+  background-color: var(--accent-100);
+  color: var(--primary-200);
+}
+
+.btn-large {
+  --btn-padding-inline: 2.5rem;
+  background-color: var(--primary-200);
+  color: var(--neutral-50);
+}
+
+/* LINKS UNDERLINE */
+.underline {
+  --line-position: -5px;
+  --line-width: 100%;
+}
+
+.underline a {
+  position: relative;
+  transition: color 0.2s ease-in;
+  color: var(--dark-primary-100);
+  font-weight: 500;
+  font-size: var(--fs-100);
+}
+
+.underline a:after {
+  position: absolute;
+  content: "";
+  bottom: var(--line-position);
+  left: 0;
+  width: var(--line-width);
+  height: 0.125rem;
+  background-color: var(--primary-200);
+  border-radius: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s linear, transform 0.1s ease-out;
+  transform: scaleX(0);
+}
+
+.underline a:hover::after,
+.underline a:focus-within::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.underline a:hover,
+.underline a:focus-within {
+  outline: none;
+  color: var(--primary-200);
+}
+
+/* SECTIONS */
+@media (min-width: 58rem) {
+  .section-special-1 {
+    background-image: var(--gradient);
+    border-radius: 3.125rem;
+    margin-inline: var(--margin-small);
+  }
+
+  .section-special-1 .section-text {
+    padding: var(--padding-big);
+  }
+}
+
+.section-special-1 .section-img-container {
+  background-image: url(../assets/pink-ellipse.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.section-special-2 {
+  background-color: var(--accent-100);
+  --grid-gap: 0;
+}
+
+.section-special-2 h3 {
+  color: var(--primary-200);
+}
+
+.section-special-2 .section-text {
+  padding-inline: var(--padding-small);
+  padding-block: var(--padding-big);
+}
+
+@media (min-width: 62em) {
+  .section-special-2 {
+    border-radius: 50px;
+    position: relative;
+    margin-inline: var(--margin-small);
+  }
+
+  .section-special-2 .section-text {
+    padding-inline-start: var(--padding-big);
+  }
+
+  .section-special-2 .section-img-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .section-special-2 img {
+    max-width: 500px;
+  }
+}
+
+/* DECORATIVE ELEMENTS */
+@media (min-width: 55em) {
+  .circles-pink {
+    --circle-big: 104px;
+    --circle-small: 32px;
+    --circle-position-small-top: 10%;
+    --circle-position-small-left: 60%;
+    --circle-position-big-bottom: -10%;
+    --circle-position-big-left: 40%;
+    position: relative;
+  }
+
+  .circles-purple {
+    --circle-big: 87px;
+    --circle-small: 31px;
+    --circle-position-small-top: 10%;
+    --circle-position-small-right: -20%;
+    --circle-position-big-top: -30%;
+    --circle-position-big-right: 0;
+    position: relative;
+  }
+
+  .circles-pink::before,
+  .circles-pink::after,
+  .circles-purple::before,
+  .circles-purple::after {
+    content: "";
+    position: absolute;
+  }
+
+  .circles-pink::before {
+    width: var(--circle-small);
+    height: var(--circle-small);
+    top: var(--circle-position-small-top);
+    left: var(--circle-position-small-left);
+    border-radius: 50%;
+    background-color: var(--accent-100);
+  }
+
+  .circles-pink::after {
+    width: var(--circle-big);
+    height: var(--circle-big);
+    left: var(--circle-position-big-left);
+    bottom: var(--circle-position-big-bottom);
+    border-radius: 50%;
+    background-color: var(--accent-100);
+  }
+
+  .circles-purple::before {
+    width: var(--circle-small);
+    height: var(--circle-small);
+    right: var(--circle-position-small-right);
+    top: var(--circle-position-small-top);
+    border-radius: 50%;
+    background-color: var(--primary-200);
+  }
+
+  .circles-purple::after {
+    width: var(--circle-big);
+    height: var(--circle-big);
+    top: var(--circle-position-big-top);
+    right: var(--circle-position-big-right);
+    border-radius: 50%;
+    background-color: var(--primary-200);
+  }
+}

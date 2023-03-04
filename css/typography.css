@@ -1,0 +1,53 @@
+h1,
+h2,
+h3 {
+  color: var(--neutral-400);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--f1-lh);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  text-align: center;
+}
+
+footer h2 {
+  font-size: var(--fs-h2-big);
+}
+
+h3 {
+  font-size: var(--fs-h3-big);
+  line-height: var(--f3-lh);
+}
+
+.section-special-2 h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  font-size: var(--fs-300);
+}
+
+footer .underline a,
+footer .underline p {
+  font-size: var(--fs-50);
+  text-align: center;
+}
+
+.section-text span {
+  color: var(--primary-200);
+  font-weight: 700;
+  font-size: var(--fs-300);
+}
+
+.section-text p {
+  color: var(--neutral-300);
+}
+
+.primary-footer p {
+  font-size: var(--fs-100);
+  color: var(--neutral-100);
+}
